@@ -7,6 +7,8 @@ const port = process.env.PORT || 8000;
 app.use(express.json());
 
 const cars = require('./cars.json');
+var cors = require("cors");
+app.use("cors");
 
 //get all cars
 app.get('/cars', (req, res) => {
